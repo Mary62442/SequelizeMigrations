@@ -1,8 +1,6 @@
 const models = require('./models');
 const Op = models.Sequelize.Op;
 
-//models.Product.findAll().then(pr => console.log(pr));
-
 let createCatWithProds = async(catObj, prodArr) => {
     let catId = await models.Category.create({
         name: catObj.name,
@@ -54,23 +52,3 @@ let newProducts = [
 ];
 
 createCatWithProds(newCategory, newProducts)
-
-/* models.Category.create({
-    name: "IT",
-    description:"IT category"
-}).then(cat => {
-    return models.Product.create({
-        sku: "web1",
-        name: "Presentation Website",
-        description: "Website for representation with basic navigation and description.",
-        subTitle : "Basic Website for representation.",
-        unitPrice: 1000,
-        isOnOffer: true,
-        quantityOnOffer: 2,
-        offerPrice: 1800, 
-        imageUrl: "web1.com",
-        notes: "",
-        CategoryId:cat.id
-    })
-}).then(pr => console.log(pr));
- */

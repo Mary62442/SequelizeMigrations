@@ -11,8 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     quantityOnOffer: {type:Sequelize.INTEGER,  allowNull:true,},
     offerPrice: {type:Sequelize.DOUBLE,  allowNull:true,}, 
     imageUrl: {type:Sequelize.STRING, allowNull:false,},
-    notes: {type:Sequelize.STRING, allowNull:true, validate:{len: [0, 500]}},
-    palla: {type:Sequelize.STRING}
+    notes: {type:Sequelize.STRING, allowNull:true, validate:{len: [0, 500]}}    
   }, {});
   Product.associate = function(models) {
     Product.belongsTo(models.Category);

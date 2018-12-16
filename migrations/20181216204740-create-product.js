@@ -7,9 +7,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },      
+      },
       sku: {
-        type:Sequelize.STRING, allowNull:false
+        type: Sequelize.STRING
       },
       name: {
         type: Sequelize.STRING,  allowNull:false,validate:{len: [2,30]}
@@ -18,7 +18,7 @@ module.exports = {
         type:Sequelize.STRING, allowNull:true, validate:{len: [0,500]}
       },
       subTitle : {
-        type: Sequelize.STRING, allowNull:true
+        type: Sequelize.STRING, allowNull:true,
       },
       unitPrice: {
         type: Sequelize.DOUBLE,  allowNull:false
